@@ -19,7 +19,7 @@
 // CHANGE THESE FOR EVERY RUN.
 // NAME OF PARAMETRIC CURVE
 char CurveType[7] = "A20-SNA";
-char CurveTypeDesc[80] = "SNAILSHELL ALGO=20 SKIP-STEP2 RUN-STEP1 RUN-ADJFRATE FRATECMD=20";
+char CurveTypeDesc[80] = "SNAILSHELL ALGO=20 SKIP-STEP2 RUN-STEP1 RUN-ADJFRATE FRATECMD=30";
 
 #include <limits.h>   // perror()
 #include <math.h>     // pow(), MUST COMPILE WITH LIBRARY -lm
@@ -138,10 +138,10 @@ double t_interpol = 0.001; // Interpolation time (period) = 1 ms per step.
 
 // The interpolator parameters are set as shown in Table 1,
 // and the command feedrate is 20 mm/s.
-double frate_command = 20.0; // mm/s (REFERENCE VALUE)
+// double const frate_command = 20.0; // mm/s (REFERENCE VALUE)
 // double const frate_command = 10.0; // mm/s
 // double const frate_command = 25.0; // mm/s
-// double const frate_command = 30.0; // mm/s
+double const frate_command = 30.0; // mm/s
 // double const frate_command = 40.0; // mm/s
 // 
 // The same interpolator parameters shown in Table 1 are used. The
